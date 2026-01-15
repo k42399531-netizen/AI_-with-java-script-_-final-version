@@ -1,0 +1,163 @@
+:root {
+         --primary-color: #2563eb;
+         --secondary-color: #1e40af;
+         --accent-color: #3b82f6;
+         --text-color: #1f2937;
+         --light-text: #6b7280;
+         --bg-color: #f3f4f6;
+         --card-bg: #ffffff;
+         --shadow-md: 0 10px 25px rgba(15, 23, 42, 0.15);
+         --radius-lg: 18px;
+         --transition: all 0.3s ease;
+     }
+     
+     /* Reset أساسي */
+     * {
+         margin: 0;
+         padding: 0;
+         box-sizing: border-box;
+     }
+     
+     /* الجسم */
+     body {
+         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+         direction: rtl;
+         background: radial-gradient(circle at top, #e5f0ff 0, #f3f4f6 40%, #e5e7eb 100%);
+         color: var(--text-color);
+         min-height: 100vh;
+         display: flex;
+         align-items: center;
+         justify-content: center;
+     }
+     
+     /* الحاوية الأساسية: العنوان فوق الكارت */
+     .signin-container {
+         width: 100%;
+         padding: 1.5rem;
+         display: flex;
+         flex-direction: column;   /* العنوان فوق النموذج */
+         align-items: center;
+         gap: 0.8rem;
+     }
+     
+     /* العنوان */
+     .signin-container h2 {
+         text-align: center;
+         font-size: 1.8rem;
+         margin-bottom: 0.2rem;
+         color: var(--text-color);
+         font-weight: 700;
+     }
+     
+     /* الكارت */
+     .signin-form {
+         background: var(--card-bg);
+         border-radius: var(--radius-lg);
+         box-shadow: var(--shadow-md);
+         padding: 2.5rem 2.2rem;
+         max-width: 420px;
+         width: 100%;
+         border: 1px solid rgba(148, 163, 184, 0.25);
+     }
+     
+     /* النموذج */
+     .signin-form form {
+         display: flex;
+         flex-direction: column;
+         gap: 0.75rem;
+     }
+     
+     /* الليبلات */
+     .signin-form label {
+         font-size: 0.9rem;
+         color: var(--light-text);
+         margin-bottom: 0.1rem;
+     }
+     
+     /* الحقول النصية */
+     .signin-form input[type="text"],
+     .signin-form input[type="email"],
+     .signin-form input[type="password"] {
+         width: 100%;
+         padding: 0.6rem 0.75rem;
+         border-radius: 10px;
+         border: 1px solid #d1d5db;
+         font-size: 0.95rem;
+         outline: none;
+         transition: var(--transition);
+         background-color: #f9fafb;
+     }
+     
+     .signin-form input[type="text"]:focus,
+     .signin-form input[type="email"]:focus,
+     .signin-form input[type="password"]:focus {
+         border-color: var(--primary-color);
+         box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.18);
+         background-color: #ffffff;
+     }
+     
+     /* مجموعة الباسورد + زر العين */
+     .password-group {
+         position: relative;
+     }
+     
+     /* نترك مساحة لزر العين داخل الحقل */
+     .password-group input[type="password"] {
+         padding-left: 2.6rem;  /* مساحة للزر من الداخل (مع RTL) */
+     }
+     
+     /* زر العين داخل حقل الباسورد */
+     .password-group .eye {
+         position: absolute;
+         top: 50%;
+         left: 0.9rem;              /* داخل الحقل من الجهة اليسرى */
+         transform: translateY(-50%);
+         width: 24px;
+         height: 24px;
+         border: none;
+         background: transparent;
+         cursor: pointer;
+         color: var(--light-text);
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         padding: 0;
+         font-size: 1rem;
+         transition: var(--transition);
+     }
+     
+     .password-group .eye:hover {
+         color: var(--primary-color);
+     }
+     
+     /* زر الذهاب إلى الصفحة الرئيسية */
+     #bti {
+         margin-top: 0.8rem;
+         width: 100%;
+         padding: 0.7rem 0.75rem;
+         border-radius: 999px;
+         border: none;
+         cursor: pointer;
+         background: linear-gradient(to left, var(--primary-color), var(--secondary-color));
+         color: #ffffff;
+         font-size: 0.95rem;
+         font-weight: 600;
+         letter-spacing: 0.5px;
+         transition: var(--transition);
+     }
+     
+     #bti:hover {
+         transform: translateY(-2px);
+         box-shadow: 0 8px 18px rgba(37, 99, 235, 0.4);
+     }
+     
+     /* موبايل */
+     @media (max-width: 480px) {
+         .signin-form {
+             padding: 2rem 1.4rem;
+         }
+     
+         .signin-container h2 {
+             font-size: 1.5rem;
+         }
+     }

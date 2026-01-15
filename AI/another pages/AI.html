@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>صفحة الذكاء الاصطناعي</title>
+    <meta name="description" content="قائمة بأشهر نماذج الذكاء الاصطناعي وخصائصها">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header class="site-header">
+        <nav class="navbar">
+            <div class="nav-left">
+                <a href="../index.html" class="brand"><i class="fas fa-robot"></i> AI World</a>
+            </div>
+            <input type="checkbox" id="menu-toggle" class="menu-toggle" aria-label="فتح القائمة">
+            <label for="menu-toggle" class="nav-toggle" aria-label="فتح القائمة"><i class="fas fa-bars"></i></label>
+            <ul class="nav-menu">
+                <li><a href="../index.html">الرئيسية</a></li>
+                <li><a href="search.html"><i class="fas fa-search"></i> بحث</a></li>
+                <li><a href="sigin.html">تسجيل الدخول</a></li>
+                <li><a href="we.html">من نحن</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="hero">
+        <h1>أفضل نماذج الذكاء الاصطناعي</h1>
+        <p class="subtitle">تعرّف على أشهر النماذج ومزايا كل منها</p>
+        <button id="feedback_button" class="feedback-btn"><i class="fas fa-comment-dots"></i> إرسال ملاحظات</button>
+    </section>
+
+    <main>
+        <section id="ai-list" class="ai-list">
+            <!-- سيتم توليد البطاقات عبر JavaScript -->
+        </section>
+    </main>
+
+    <footer class="middle_footer">
+        <p>&copy; 2025 جميع الحقوق محفوظة</p>
+        <br>
+        <input type="text" placeholder="اكتب مراجعتك" id="feedback-input">
+        <button id="submit-feedback">إرسال</button>
+        <br>
+    </footer>
+
+    <script src="index.js"></script>
+</body>
+</html>

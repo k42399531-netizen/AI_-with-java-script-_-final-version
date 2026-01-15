@@ -1,0 +1,186 @@
+/* أساسيات التصميم ومتغيرات */
+:root{
+  --primary:#2563eb;
+  --primary-dark:#1e40af;
+  --bg:#f5f7fb;
+  --text:#0f172a;
+  --muted:#64748b;
+  --card:#ffffff;
+  --shadow:0 10px 20px rgba(0,0,0,.08);
+  --radius:16px;
+  --transition:.3s ease;
+}
+
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%}
+body{
+  font-family:'Segoe UI',Tahoma,Arial,sans-serif;
+  background:var(--bg);
+  color:var(--text);
+  direction:rtl;
+}
+
+/* ناف بار جميل ومتجاوب */
+.site-header{position:sticky;top:0;background:var(--card);box-shadow:0 2px 8px rgba(0,0,0,.06);z-index:50}
+.navbar{
+  max-width:1200px;margin:0 auto;padding:12px 20px;
+  display:flex;align-items:center;justify-content:space-between;
+}
+.brand{
+  display:inline-flex;align-items:center;gap:8px;
+  font-weight:700;text-decoration:none;
+  background:linear-gradient(90deg,var(--primary),#60a5fa);
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;
+}
+.nav-menu{list-style:none;display:flex;align-items:center;gap:18px}
+.nav-menu a{
+  color:var(--text);text-decoration:none;font-weight:500;
+  padding:8px 12px;border-radius:10px;transition:var(--transition);
+}
+.nav-menu a:hover{background:#eef2ff;color:var(--primary)}
+.nav-toggle{display:none;background:none;border:none;font-size:20px;color:var(--text);cursor:pointer}
+.menu-toggle{display:none}
+.nav-toggle{display:none}
+.menu-toggle + .nav-toggle{display:none}
+.menu-toggle:checked ~ .nav-menu{display:flex}
+
+/* قسم الهيرو */
+.hero{
+  background:linear-gradient(135deg,var(--primary),var(--primary-dark));
+  color:#fff;text-align:center;padding:60px 20px;margin-bottom:24px;
+}
+.hero h1{font-size:32px;margin-bottom:8px}
+.hero .subtitle{opacity:.9}
+.feedback-btn{
+  margin-top:16px;
+  background:var(--primary);
+  color:#fff;
+  border:none;
+  padding:10px 16px;
+  border-radius:12px;
+  cursor:pointer;
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  box-shadow:0 8px 16px rgba(37,99,235,.25);
+  transition:var(--transition);
+}
+.feedback-btn:hover{background:var(--primary-dark);transform:translateY(-2px)}
+.feedback-btn:focus-visible{outline:3px solid #93c5fd;outline-offset:2px}
+
+/* قائمة الـ AI (بطاقات) */
+.ai-list{
+  max-width:1200px;margin:0 auto;padding:0 20px 40px;
+  display:grid;gap:22px;
+}
+
+/* بطاقة مفصلة: img بجانب texts */
+.AI{
+  display:flex;align-items:stretch;gap:40px;
+  background:var(--card);border-radius:var(--radius);box-shadow:var(--shadow);
+  overflow:hidden;transition:var(--transition);
+  padding:16px 20px;
+  animation: cardEnter .6s ease both;
+}
+.AI:hover{box-shadow:0 16px 32px rgba(0,0,0,.12);transform:translateY(-6px)}
+
+@keyframes cardEnter{
+  from{transform:translateY(16px);opacity:0}
+  to{transform:translateY(0);opacity:1}
+}
+.AI:nth-child(1){animation-delay:.05s}
+.AI:nth-child(2){animation-delay:.1s}
+.AI:nth-child(3){animation-delay:.15s}
+.AI:nth-child(4){animation-delay:.2s}
+.AI:nth-child(5){animation-delay:.25s}
+.AI:nth-child(6){animation-delay:.3s}
+.AI:nth-child(7){animation-delay:.35s}
+.AI:nth-child(8){animation-delay:.4s}
+.AI:nth-child(9){animation-delay:.45s}
+.AI:nth-child(10){animation-delay:.5s}
+
+.AI .img{
+  flex:0 0 360px;position:relative;overflow:hidden;background:#e5e7eb;
+}
+.AI .img img{
+  width:100%;height:100%;object-fit:cover;transition:transform .6s ease;
+}
+.AI:hover .img img{transform:scale(1.04)}
+.AI .img p{
+  position:absolute;top:12px;right:12px;
+  background:rgba(0,0,0,.6);color:#fff;padding:6px 10px;border-radius:12px;
+  font-weight:700;backdrop-filter:blur(4px)
+}
+
+.AI .texts{
+  flex:0 1 55%;
+  padding:24px;
+  display:flex;flex-direction:column;gap:10px;justify-content:center;
+  border:1px solid #e5e7eb;border-radius:12px;background:#fff;
+}
+.AI:hover .texts{border-color:#c7d2fe}
+.AI .texts h2{font-size:22px}
+.AI .texts p{color:var(--muted);line-height:1.8}
+.AI .texts a{
+  align-self:flex-start;margin-top:8px;
+  background:var(--primary);color:#fff;text-decoration:none;
+  padding:10px 14px;border-radius:12px;transition:var(--transition)
+}
+.AI .texts a:hover{background:var(--primary-dark);transform:translateY(-2px)}
+.AI .texts a:focus-visible{outline:3px solid #93c5fd;outline-offset:2px;border-radius:12px}
+.middle_footer input{
+      border: solid gray 2px;
+      padding: 20px;
+      border-radius: 12px;
+      background-color: white;
+      color:black;
+      font-size: 25px;
+
+}
+.middle_footer button{
+      border: solid gray 2px;
+      padding: 20px;
+      border-radius: 12px;
+      background-color: white;
+      color:black;
+      font-size: 25px;
+      transition: var(--transition);
+}
+.middle_footer button:hover{
+      transform: translateY(-2px);
+      box-shadow: 0 10px 24px rgba(15, 23, 42, 0.12);
+      border-color: rgba(37, 99, 235, 0.35);
+}
+/* تأثيرات إضافية */
+@keyframes floatY{
+  from{transform:translateY(0)}50%{transform:translateY(-6px)}to{transform:translateY(0)}
+}
+.AI:hover .texts h2{animation:none}
+
+/* حركة دخول عامة + احترام تقليل الحركة */
+@keyframes cardEnter{
+  from{transform:translateY(16px);opacity:0}
+  to{transform:translateY(0);opacity:1}
+}
+
+@media (prefers-reduced-motion: reduce){
+  *{animation:none !important; transition:none !important;}
+}
+
+/* تجاوب كامل لكل الأجهزة */
+@media (max-width:1024px){
+  .AI .img{flex-basis:280px}
+}
+@media (max-width:768px){
+  .nav-toggle{display:block}
+  .nav-menu{display:none;position:absolute;top:56px;right:20px;background:#fff;padding:12px;border-radius:12px;box-shadow:var(--shadow);flex-direction:column;gap:10px}
+  .menu-toggle + .nav-toggle{display:block}
+  .AI{flex-direction:column;gap:24px}
+  .AI .img{flex-basis:auto;height:220px}
+  .AI .texts{flex:1;border:1px solid #e5e7eb}
+  .feedback-btn{width:100%}
+}
+@media (max-width:420px){
+  .hero h1{font-size:26px}
+  .AI .texts h2{font-size:20px}
+}

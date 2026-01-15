@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<!-- تحديد لغة الصفحة للعربية والاتجاه من اليمين لليسار لدعم القراءة الصحيحة -->
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <!-- هام جداً للتجاوب (Responsive): يضبط عرض الصفحة ليناسب عرض شاشة الجهاز ومستوى التكبير -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Revolution</title>
+    <meta name="description" content="welcome back the biggest in webs of AI">
+    
+    <!-- ربط ملف التنسيقات الخارجي -->
+    <link rel="stylesheet" href="index.css">
+    <!-- مكتبة FontAwesome للأيقونات -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- الهيدر: يحتوي على القائمة العلوية -->
+    <header>
+        <nav>
+            <div class="logo">عالم الذكاء الاصطناعي</div>
+            <!-- القائمة: تستخدم Flexbox في CSS لتوزيع العناصر بشكل مرن -->
+            <ul>
+                <li><a href="another pages/sigin.html">تسجيل الدخول</a></li>
+                <li><a href="another pages/we.html">من نحن</a></li>
+                <!-- تصحيح الخطأ: إزالة زر button واستخدام a مباشرة مع كلاس الزر -->
+                <!-- السبب: وضع عنصر a داخل button غير صالح في HTML ويسبب مشاكل في المتصفحات -->
+                <li><a href="another pages/search.html" class="search-btn"><i class="fas fa-search"></i> بحث</a></li>
+                <a href="pages.ai/ai.html">\<button class="search-btn"> information</button></a>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- قسم الهيرو (الواجهة الرئيسية): أول ما يراه المستخدم -->
+    <div class="hero">
+        <h1>مرحباً بك في عالم الذكاء الاصطناعي</h1>
+        <!-- حاوية النص المتحرك -->
+        <div class="typed-container">
+            <span id="element"></span></a>
+        </div>
+    </div>
+
+    <!-- المحتوى الرئيسي -->
+    <main>
+        <section class="intro-text">
+            <!-- مساحة لأي نصوص مقدمة إضافية -->
+        </section>
+
+        <!-- شبكة النماذج: سيتم تعبئتها ديناميكياً بواسطة JavaScript -->
+        <!-- تستخدم CSS Grid لضمان التجاوب مع جميع أحجام الشاشات -->
+        <section id="models-container" class="models-grid">
+            <!-- سيقوم الكود بإنشاء البطاقات هنا -->
+        </section>
+    </main>
+    <a href="another pages/AI.html" target="_blank" id="main-button"><p> الانتقال الي الصفحة الاساسية </p></a>
+
+    <!-- التذييل -->
+    <footer>
+        <p>&copy; 2025 جميع الحقوق محفوظة.</p>
+    </footer>
+
+    <!-- مكتبة Typed.js للكتابة المتحركة -->
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    
+    <!-- تهيئة مكتبة Typed.js -->
+    <script>
+        var typed = new Typed('#element', {
+            strings: [
+                'شهد عام 2025 تحولاً جذرياً؛ حيث انتهى عصر الهيمنة الأحادية للنماذج الغربية المغلقة.',
+                'وبرز مشهد متعدد الأقطاب يتميز بالصعود القوي للصين، والسيادة الرقمية العربية.',
+                'انتقل الصراع من مجرد سباق على عدد المعلمات إلى منافسة على كفاءة الحوسبة والمنطق المعقد.'
+            ],
+            typeSpeed: 40,   // سرعة الكتابة
+            backSpeed: 20,   // سرعة المسح
+            loop: true       // تكرار الحركة
+        });
+    </script>
+
+    <!-- ملف الجافاسكريبت الرئيسي للمشروع -->
+    <script src="index.js"></script>
+</body>
+</html>
